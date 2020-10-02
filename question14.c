@@ -1,3 +1,4 @@
+// FCFS program
 #include<stdio.h>
 int main()
 {
@@ -5,9 +6,10 @@ int main()
 	float Average_waiting_time, Average_turn_around_time;
 	printf("Enter the number of people (Student + teacher): ");
 	scanf("%d",&n);
+	printf("\n Enter process ID:-\n"); // There might be chance that the user wants to start the proceed ID from 1
 for(i=0;i<n;i++)
 {
-Id[i] = i;
+scanf("%d",&Id[i]);
 printf("Time taken by person %d: ", i);
 scanf("%d",&Burst_time[i]);
 printf("Enter priority: Teacher/Student(0/1): ");
@@ -48,6 +50,5 @@ printf("\n\n Average Waiting Time: %f",Average_waiting_time/n);
 printf("\n Average Turnaround Time: %f",Average_turn_around_time/n);
 getch();
 }
-
 
 
